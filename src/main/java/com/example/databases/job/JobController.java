@@ -1,9 +1,6 @@
 package com.example.databases.job;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,5 +23,11 @@ public class JobController {
     public String createjob(@RequestBody Job job){
         jobService.createJob(job);
         return  "Job Added Successfuly";
+    }
+
+    @GetMapping("/jobs/{id}")
+    public Job getJobById(@PathVariable Long id) {
+        System.out.println(id);
+       return jobService.findJobById(id);
     }
 }
