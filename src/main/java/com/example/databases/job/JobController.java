@@ -1,5 +1,7 @@
 package com.example.databases.job;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -26,8 +28,10 @@ public class JobController {
     }
 
     @GetMapping("/jobs/{id}")
-    public Job getJobById(@PathVariable Long id) {
-        System.out.println(id);
-       return jobService.findJobById(id);
+    public ResponseEntity<Job> getJobById(@PathVariable Long id) {
+        Job job = jobService.findJobById(id);
+        if(job!=null)
+            return new ResponseEntity<>(job, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
