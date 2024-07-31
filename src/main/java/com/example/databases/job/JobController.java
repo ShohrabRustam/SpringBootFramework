@@ -22,9 +22,9 @@ public class JobController {
     }
 
     @PostMapping("/jobs")
-    public String createjob(@RequestBody Job job){
+    public ResponseEntity<String> createjob(@RequestBody Job job){
         jobService.createJob(job);
-        return  "Job Added Successfuly";
+        return  new ResponseEntity<>("Job Added Successfuly", HttpStatus.CREATED);
     }
 
     @GetMapping("/jobs/{id}")
