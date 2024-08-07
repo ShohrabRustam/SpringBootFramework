@@ -17,14 +17,14 @@ public class JobController {
     }
 
     @GetMapping("jobList")
-    public List<Job> findAll(){
-        return jobService.findAll();
+    public ResponseEntity<List<Job>> findAll(){
+        return ResponseEntity.ok(jobService.findAll());
     }
 
     @PostMapping("/jobs")
     public ResponseEntity<String> createjob(@RequestBody Job job){
         jobService.createJob(job);
-        return  new ResponseEntity<>("Job Added Successfuly", HttpStatus.CREATED);
+        return ResponseEntity.ok("Job Added Successfuly");
     }
 
     @GetMapping("/jobs/{id}")
