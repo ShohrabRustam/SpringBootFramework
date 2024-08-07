@@ -45,4 +45,20 @@ public class JobSevice implements JobService {
         return isDeleted;
     }
 
+   public boolean updateJobById(Long id,Job updatedJob){
+        boolean isUpdated = false;
+        for(Job job: jobs){
+            if(job.getId().equals(id)){
+                isUpdated = true;
+                job.setTitle(updatedJob.getTitle());
+                job.setDecription(updatedJob.getDecription());
+                job.setMinSalary(updatedJob.getMinSalary());
+                job.setMaxSalary(updatedJob.getMaxSalary());
+                job.setLocation(updatedJob.getLocation());
+            }
+        }
+        return isUpdated;
+    }
+
+
 }
