@@ -34,15 +34,15 @@ public class JobSevice implements JobService {
     }
     public boolean deleteJobById(Long id){
         Iterator<Job> iterator = jobs.iterator();
+        boolean isDeleted = false;
         while (iterator.hasNext()){
             Job job = iterator.next();
             if (job.getId().equals(id)){
                 iterator.remove();
-                return true;
+                isDeleted =  true;
             }
         }
-
-        return false;
+        return isDeleted;
     }
 
 }
