@@ -1,7 +1,16 @@
 package com.example.databases.job;
 
-public class Job {
+import jakarta.persistence.*;
 
+@Entity
+//@Table(name = "tbl_jobs")
+public class Job {
+    public Job() {
+
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
     private String decription;
