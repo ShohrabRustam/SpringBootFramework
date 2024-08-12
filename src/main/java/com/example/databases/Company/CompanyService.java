@@ -7,5 +7,6 @@ public interface CompanyService {
     Company findCompanyById(Long id);
     void crateCompany(Company company);
     boolean updateCompany(Long id, Company company);
+    boolean deleteCompanyById(Long id);
 
 }
