@@ -1,0 +1,56 @@
+package com.example.databases.Company;
+
+import com.example.databases.job.Job;
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+public class Company {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private String decription;
+
+    @OneToMany
+    private List<Job> jobs;
+
+//    @OneToMany
+//    private List<Review> reviews;
+
+    public Company() {
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
+
+    public String getDecription() {
+        return decription;
+    }
+
+    public void setDecription(String decription) {
+        this.decription = decription;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+}
