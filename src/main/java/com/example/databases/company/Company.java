@@ -18,12 +18,20 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
-//    @OneToMany
-//    private List<Review> reviews;
+    @JsonIgnore
+    @OneToMany(mappedBy = "company")
+    private List<Review> reviews;
 
     public Company() {
     }
 
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
 
     public String getDecription() {
         return decription;
