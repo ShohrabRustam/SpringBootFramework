@@ -1,4 +1,4 @@
-package com.example.databases.job;
+package com.example.databases.Job;
 
 import com.example.databases.Company.Company;
 import jakarta.persistence.*;

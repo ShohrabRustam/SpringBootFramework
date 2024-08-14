@@ -1,4 +1,4 @@
-package com.example.databases.job;
+package com.example.databases.Job;
 
 import java.util.List;
 
