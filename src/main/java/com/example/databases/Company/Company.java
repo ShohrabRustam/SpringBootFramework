@@ -13,7 +13,7 @@ public class Company {
     private String name;
     private String decription;
 
-    @OneToMany
+    @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
 //    @OneToMany

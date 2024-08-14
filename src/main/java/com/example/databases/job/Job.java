@@ -1,5 +1,6 @@
 package com.example.databases.job;
 
+import com.example.databases.Company.Company;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +18,9 @@ public class Job {
     private Long minSalary;
     private Long maxSalary;
     private String location;
+
+    @ManyToOne
+    private Company company;
 
     public Job(Long id, String title, String decription, Long minSalary, Long maxSalary, String location) {
         this.id = id;
