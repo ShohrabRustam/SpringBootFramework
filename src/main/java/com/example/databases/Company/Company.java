@@ -46,4 +46,12 @@ public class Company {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
 }
