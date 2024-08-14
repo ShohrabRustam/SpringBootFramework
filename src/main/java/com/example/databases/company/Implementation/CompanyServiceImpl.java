@@ -1,8 +1,8 @@
-package com.example.databases.Company.Implementation;
+package com.example.databases.company.Implementation;
 
-import com.example.databases.Company.Company;
-import com.example.databases.Company.CompanyRepository;
-import com.example.databases.Company.CompanyService;
+import com.example.databases.company.Company;
+import com.example.databases.company.CompanyRepository;
+import com.example.databases.company.CompanyService;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.example.databases.Company;
+package com.example.databases.company;
 
 import java.util.List;
 

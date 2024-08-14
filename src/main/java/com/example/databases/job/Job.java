@@ -1,6 +1,6 @@
-package com.example.databases.Job;
+package com.example.databases.job;
 
-import com.example.databases.Company.Company;
+import com.example.databases.company.Company;
 import jakarta.persistence.*;
 
 @Entity

@@ -1,8 +1,8 @@
-package com.example.databases.Job.Implementation;
+package com.example.databases.job.Implementation;
 
-import com.example.databases.Job.Job;
-import com.example.databases.Job.JobRepository;
-import com.example.databases.Job.JobService;
+import com.example.databases.job.Job;
+import com.example.databases.job.JobRepository;
+import com.example.databases.job.JobService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

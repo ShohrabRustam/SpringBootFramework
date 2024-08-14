@@ -1,6 +1,6 @@
-package com.example.databases.Company;
+package com.example.databases.company;
 
-import com.example.databases.Job.Job;
+import com.example.databases.job.Job;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 

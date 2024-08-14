@@ -1,4 +1,4 @@
-package com.example.databases.Company;
+package com.example.databases.company;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
