@@ -31,6 +31,14 @@ public class Job {
         this.location = location;
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     public Long getMaxSalary() {
         return maxSalary;
     }
