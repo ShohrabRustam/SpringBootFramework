@@ -14,7 +14,7 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
-    private String decription;
+    private String description;
     private Long minSalary;
     private Long maxSalary;
     private String location;
@@ -22,10 +22,10 @@ public class Job {
     @ManyToOne
     private Company company;
 
-    public Job(Long id, String title, String decription, Long minSalary, Long maxSalary, String location) {
+    public Job(Long id, String title, String description, Long minSalary, Long maxSalary, String location) {
         this.id = id;
         this.title = title;
-        this.decription = decription;
+        this.description = description;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
@@ -63,12 +63,12 @@ public class Job {
         this.title = title;
     }
 
-    public String getDecription() {
-        return decription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDecription(String decription) {
-        this.decription = decription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Long getMinSalary() {

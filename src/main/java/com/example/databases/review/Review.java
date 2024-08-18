@@ -1,6 +1,7 @@
 package com.example.databases.review;
 
 import com.example.databases.company.Company;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,10 +13,10 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
-    private String discription;
+    private String description;
     private double rating;
 
-    @OneToMany
+    @ManyToOne
     private Company company;
 
     public Company getCompany() {
@@ -42,12 +43,12 @@ public class Review {
         this.title = title;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String discription) {
+        this.description = discription;
     }
 
     public double getRating() {

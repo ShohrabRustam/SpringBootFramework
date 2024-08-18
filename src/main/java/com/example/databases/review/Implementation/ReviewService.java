@@ -22,6 +22,12 @@ public class ReviewService implements com.example.databases.review.ReviewService
     }
 
     @Override
+    public List<Review> getAllReviewByCompanyId(Long companyId) {
+        List<Review> reviews = reviewRepository.findByCompanyId(companyId);
+        return reviews;
+    }
+
+    @Override
     public Review findReviewById(Long id) {
         return reviewRepository.findById(id).orElse(null);
     }
@@ -37,7 +43,7 @@ public class ReviewService implements com.example.databases.review.ReviewService
         if(optionalReview.isPresent()){
             Review review = optionalReview.get();
             review.setTitle(review.getTitle());
-            review.setDiscription(review.getDiscription());
+            review.setDescription(review.getDescription());
             review.setRating(review.getRating());
             reviewRepository.save(review);
             return true;
@@ -52,5 +58,10 @@ public class ReviewService implements com.example.databases.review.ReviewService
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean deleteReviewByCompanyId(Long companyId) {
+        return reviewRepository.deleteByCompanyId(companyId);
     }
 }
